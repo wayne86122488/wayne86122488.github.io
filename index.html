@@ -9,12 +9,20 @@ header {
   padding: 32px;
   text-align: left;
   font-size: 120%;
-  color: white;
   background: url("./header.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 55%;
+  color: #222;
 }
+header a:link, a:visited {
+    text-decoration: none;
+    color: #222;
+}
+header a:hover {
+    color: #c71e0f;
+}
+
 body{
     min-height: 100vh;
     display: flex;
@@ -22,17 +30,6 @@ body{
     min-width: 100px;
     width: 100%;
     margin: 0 auto;
-}
-
-a {
-    text-decoration: none;
-}
-a:link, a:visited {
-    color: #222;
-}
-a:hover {
-    color: #6e160e;
-
 }
 
 nav ul {
@@ -44,22 +41,26 @@ nav ul {
   height: 42px;
   width: 100%;
 }
-li {
+nav ul li {
   float: left;
   border-right: 1px solid #a6816d;
 }  
-li a {
+nav ul li a{
+  text-decoration: none;
   display: inline-block;
   vertical-align: middle;
   height: 22px;
   padding: 10px 20px; 
   text-align: center;
   background-color: #444;
-  text-decoration: none;
   width: cover;
 }
-li a:hover {
-  background-color: #555;
+nav ul li a:link, nav ul li a:visited {
+    color: white;
+}
+nav ul li a:hover {
+    color: #f2e205;
+    background-color: #555;
 }
 
 article {
@@ -94,7 +95,7 @@ table, th, td {
   border:1px solid black;
   text-align:center;
 }
-	
+  
 p {
   padding: 0 4%;
 }
@@ -110,10 +111,10 @@ p {
 
 <nav>
   <ul>	
-    <li><a style="color: #ffffff" href="https://wayne86122488.github.io/research">Research</a></li>
-    <li><a style="color: #ffffff" href="https://wayne86122488.github.io/cv">CV</a></li>
-    <li><a style="color: #ffffff" href="https://wayne86122488.github.io/notes">Notes</a></li>
-    <li><a style="color: #ffffff" href="https://wayne86122488.github.io/essays">Articles</a></li>
+    <li><a href="https://wayne86122488.github.io/research">Research</a></li>
+    <li><a href="https://wayne86122488.github.io/cv">CV</a></li>
+    <li><a href="https://wayne86122488.github.io/notes">Notes</a></li>
+    <li><a href="https://wayne86122488.github.io/essays">Articles</a></li>
   </ul>
 </nav>
 
