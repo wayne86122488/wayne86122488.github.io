@@ -145,12 +145,39 @@ blockquote:after {
 }
 
 .col_p{
-    line-height: 1.3em;
+    line-height: 1.5em;
     padding: 0 14%; 
     text-indent:2em; 
     text-align: justify;;
     font-size: 18px;
 }
+
+summary:hover{
+  cursor: pointer;
+  color: #c71e0f;
+}
+
+details > p{
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  background-color: #b7b8a3;
+  margin: 4%;
+  font-size: 18px;
+}
+details > summary {
+    font-size: 18px;
+    list-style-type: 'ᐅ ';
+}
+details[open] > summary {
+    list-style-type: 'ᐁ ';
+}
+
+.contact{
+    color:black;
+}
+.contact:hover{
+    color:#c71e0f;
+}
+
 
 </style>
 </head>
@@ -174,14 +201,18 @@ blockquote:after {
     <div class="column_small" style="background-color:#aaa;">
       <h2 style="text-align:center"> Personal Profile </h2>
       <img src="123.png" style="width:157px; height: 157px; border-radius: 50%;">
+      <br>
       <p><blockquote> You don't have to be responsible for the world that you're in. </blockquote></p>
-	  <p style="font-size: 18px; text-align: center; padding-bottom: 0.5em;">- John von Neumann to Richard Feynman -</p>
-      <ul style="padding: 0 16%; text-align: left;line-height: 1.8em; color: #404040">
-        <li>Aim to be a Theoretical Physicist</li>
-        <li>Extensive Taste of Knowledge</li>
-        <li>Reading, Soccer, Tennis, and Cooking</li>
-        <li>Perhaps an <a style="color: #404040" href="https://plato.stanford.edu/entries/contextualism-epistemology/">Epistemic Contextualist</a> Favoring Materialism</li>  
+	  <p style="font-size: 18px; text-align: center; padding-bottom: 2.0em;">- John von Neumann to Richard Feynman -</p>
+      <ul style="padding: 0 12%; text-align: left;line-height: 1.8em; color: #404040; list-style-type: none;">
+        <li><details><summary>Aim to be a Theoretical Physicist</summary><p> AAA </p></details> </li>
+        <li><details><summary>Extensive Taste of Knowledge</summary><p> AAA </p></details></li>
+        <li><details><summary>Reading, Soccer, Tennis, and Cooking</summary><p> AAA </p></details></li>
+        <li style = "font-size: 18px;">ᐅ Perhaps an <a style="color: #404040" href="https://plato.stanford.edu/entries/contextualism-epistemology/">Epistemic Contextualist</a> Favoring Materialism</li>  
       </ul>
+      <br>
+      <p style="color:black; font-size:18px; padding: 0 12%; text-align: left;"}> E-Mail: <a class="contact" href = "mailto: wayne86122488@gapp.nthu.edu.tw"> wayne86122488@gapp.nthu.edu.tw </a> </p>
+      <p style="color:black; font-size:18px; padding: 0 12%; text-align: left;"}> Twitter: <a class="contact" href = "https://twitter.com/ChangHengWei3"> https://twitter.com/ChangHengWei3 </a> </p>
     </div>
     <div class="column_large" style="background-color:#f0f0f0;">
       <br>
@@ -189,7 +220,7 @@ blockquote:after {
       <br>
       <p  class="col_p">  Difficult Question. </p>  
       <p  class="col_p">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar magna fermentum efficitur fermentum. Maecenas a bibendum nibh, id imperdiet mi. Aliquam malesuada efficitur est quis tincidunt. In nec neque vulputate felis laoreet placerat in eget odio. Curabitur nec dolor fermentum, ultrices diam in, mollis mauris. Nam non placerat massa. Maecenas sagittis tristique lacus vitae condimentum.</p>
-       </div>
+    </div>
 </div>
 
 <footer>
