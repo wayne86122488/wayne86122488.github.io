@@ -85,9 +85,19 @@ footer {
   color: white;
 }
 
-.column {
+.row{
+    display: flex;
+}
+.column_small {
+  float: center;
+  text-align: center;
+  width: 40%;
+  min-height: 100vh;
+}
+.column_large {
   float: left;
-  width: 33%;
+  width: 60%;
+  min-height: 100vh;
 }
 .row:after {
   content: "";
@@ -102,6 +112,44 @@ table, th, td {
   
 p {
   padding: 0 4%;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    position: relative;
+    font-size: 24px; 
+    text-align: center;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+blockquote:before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 4em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+    color:#5b6e6c;
+}
+blockquote:after {
+    font-family: Georgia, serif;
+    position: absolute;
+    float:right;
+    font-size:4em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+    color:#5b6e6c;
+}
+
+.col_p{
+    line-height: 1.3em;
+    padding: 0 14%; 
+    text-indent:2em; 
+    text-align: justify;;
+    font-size: 18px;
 }
 
 </style>
@@ -122,14 +170,25 @@ p {
   </ul>
 </nav>
 
-<section>
-<article>
-	<p style="font-size: 25px; text-align: center; font-family: 'Times New Roman', Times, serif;">" You don't have to be responsible for the world that you're in."</p> 
-	<p style="font-size: 18px; text-align: center;">- John von Neumann to Richard Feynman -</p>
-  <h2 style="text-align:center"> Personal Profile </h2>
-</article>
-</section>
-
+<div class="row">
+    <div class="column_small" style="background-color:#aaa;">
+      <h2 style="text-align:center"> Personal Profile </h2>
+      <img src="123.png" style="width:157px; height: 157px; border-radius: 50%;">
+      <p><blockquote> You don't have to be responsible for the world that you're in. </blockquote></p>
+	  <p style="font-size: 18px; text-align: center; padding-bottom: 0.5em;">- John von Neumann to Richard Feynman -</p>
+      <ul style="padding: 0 16%; text-align: left;line-height: 1.8em; color: #404040">
+        <li>Aim to be a Theoretical Physicist</li>
+        <li>Extensive Taste of Knowledge</li>
+        <li>Reading, Soccer, Tennis, and Cooking</li>
+        <li>Perhaps an <a style="color: #404040" href="https://plato.stanford.edu/entries/contextualism-epistemology/">Epistemic Contextualist</a> Favoring Materialism</li>  
+      </ul>
+    </div>
+    <div class="column_large" style="background-color:#f0f0f0;">
+      <h2 style="text-align: center;">Who am I?</h2>
+      <p  class="col_p">  Difficult Question. </p>  
+      <p  class="col_p">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar magna fermentum efficitur fermentum. Maecenas a bibendum nibh, id imperdiet mi. Aliquam malesuada efficitur est quis tincidunt. In nec neque vulputate felis laoreet placerat in eget odio. Curabitur nec dolor fermentum, ultrices diam in, mollis mauris. Nam non placerat massa. Maecenas sagittis tristique lacus vitae condimentum.</p>
+       </div>
+</div>
 
 <footer>
   <p> <a style="color: white;" href = "mailto: wayne86122488@gapp.nthu.edu.tw"><img src="email.png" style="width:30px; height:30px;"></a> &ensp;&ensp;&ensp;  <a style="color: white;" href ="https://twitter.com/ChangHengWei3"><img src="twitter.png" style="width:30px; height:30px;"></a>  </p>
