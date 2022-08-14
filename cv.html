@@ -174,15 +174,36 @@ blockquote:after {
   }
 }
 
-  
+ .von_neumann{
+  font-size: 18px; 
+  text-align: center;
+  color: #a5a5bb
+}
+@media screen and (min-width: 600px) {
+  .von_neumann_small{display: none;} 
+}
+
+.von_neumann_small{
+  font-size: 16px; 
+  text-align: center;
+  color: #a5a5bb;
+  margin-bottom: -0.8em;
+}
+@media screen and (max-width: 600px) {
+  .von_neumann{display: none;} 
+}
+
 </style>
 </head>
 
 <body>
   
 <header>
-    <p><blockquote> You don't have to be responsible for the world that you're in. </blockquote></p>
-    <p style="font-size: 18px; text-align: center;color: #a5a5bb">- John von Neumann to Richard Feynman -</p>
+  <p><blockquote> You don't have to be responsible for the world that you're in. </blockquote></p>
+  <p class = "von_neumann">- John von Neumann to Richard Feynman -</p>
+  <p class = "von_neumann_small">John von Neumann</p>
+  <p class = "von_neumann_small">to</p>
+  <p class = "von_neumann_small" style="margin-bottom: 0em;">Richard Feynman</p> 
 </header>
 
 <nav>
