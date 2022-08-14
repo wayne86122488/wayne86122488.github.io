@@ -202,6 +202,58 @@ blockquote:after {
   .von_neumann{display: none;} 
 }
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  background-color: black;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 600px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
 </style>
 </head>
 
@@ -226,10 +278,45 @@ blockquote:after {
 </nav>
 
 <article class="article_cool">
-<h2 style = "text-align: center"> Research </h2>
+
+<h2 style = "text-align: center"> Research </h3>
+
   
 <h3 style = "text-align: center"> My Research Interests </h3>
-<p style = "text-align: center">  Theoretical Particle Physics, Classical and Quantum Gravity, Cosmology, and Mathematical Physics. </p>
+<p style = "text-align: center">  <span style="cursor:pointer" onclick="openTPP()">Theoretical Particle Physics</span> </p>
+<p style = "text-align: center">  <span style="cursor:pointer" onclick="openCQG()">Classical and Quantum Gravity</span> </p>
+<p style = "text-align: center">  <span style="cursor:pointer" onclick="openCOSMOS()">Cosmology</span> </p>
+<p style = "text-align: center">  <span style="cursor:pointer" onclick="openMP()">Mathematical Physics</span> </p>
+
+<div id="TPP" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeTPP()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">TPP</a>
+  </div>
+</div>
+
+<div id="CQG" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeCQG()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">CQG</a>
+  </div>
+</div>
+
+<div id="COSMOS" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeCOSMOS()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">COSMOS</a>
+  </div>
+</div>
+
+<div id="MP" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeMP()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">MP</a>
+  </div>
+</div>
+
+<br>
 
 <h3 style = "text-align: center"> Publications </h3>
 <p style = "text-align: center"> TBA </p>
@@ -249,6 +336,35 @@ blockquote:after {
       navbar.classList.remove("sticky");
     }
   }
+
+  function openTPP() {
+    document.getElementById("TPP").style.width = "100%";
+  } 
+  function closeTPP() {
+    document.getElementById("TPP").style.width = "0%";
+  }
+
+  function openCQG() {
+    document.getElementById("CQG").style.width = "100%";
+  } 
+  function closeCQG() {
+    document.getElementById("CQG").style.width = "0%";
+  }
+
+  function openCOSMOS() {
+    document.getElementById("COSMOS").style.width = "100%";
+  } 
+  function closeCOSMOS() {
+    document.getElementById("COSMOS").style.width = "0%";
+  }
+
+  function openMP() {
+    document.getElementById("MP").style.width = "100%";
+  } 
+  function closeMP() {
+    document.getElementById("MP").style.width = "0%";
+  }
+
 </script>
 
 <footer>
