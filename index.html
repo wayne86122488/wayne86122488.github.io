@@ -78,7 +78,7 @@ nav ul li a:hover {
     overflow: hidden;
     background-color: #444;
     margin-top: 0;
-    margin-bottom: auto;
+    margin-bottom: 0;
     padding-left: 0;
     height: auto;
   }
@@ -219,6 +219,8 @@ details[open] > summary:after {
     color:#c71e0f;
 }
 
+.content{}
+
 .von_neumann{
   font-size: 18px; 
   text-align: center;
@@ -226,6 +228,14 @@ details[open] > summary:after {
 }
 @media screen and (min-width: 600px) {
   .von_neumann_small{display: none;} 
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky + .column_small {
+    padding-top: 30px;
+  }
 }
 
 .von_neumann_small{
@@ -237,6 +247,7 @@ details[open] > summary:after {
 @media screen and (max-width: 600px) {
   .von_neumann{display: none;} 
 }
+
 
 </style>
 </head>
@@ -251,7 +262,7 @@ details[open] > summary:after {
   <p class = "von_neumann_small" style="margin-bottom: 0em;">Richard Feynman</p> 
 </header>
 
-<nav>
+<nav id="navbar">
   <ul>	
     <li><a style="background-color: #696969;" href="https://wayne86122488.github.io/">Me</a></li>
     <li><a href="https://wayne86122488.github.io/research">Research</a></li>
@@ -285,5 +296,21 @@ details[open] > summary:after {
 <footer>
   <p> <a style="color: white;" href = "mailto: wayne86122488@gapp.nthu.edu.tw"><img src="email.png" style="width:30px; height:30px;"></a> &ensp;&ensp;&ensp;  <a style="color: white;" href ="https://twitter.com/ChangHengWei3"><img src="twitter.png" style="width:30px; height:30px;"></a>  </p>
 </footer>
+
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
+
 </body>
 </html>
