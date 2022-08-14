@@ -170,6 +170,12 @@ blockquote:after {
     right: 0;
   }
 }
+
+
+.article_cool{
+  color: black;
+}
+
 .von_neumann{
   font-size: 18px; 
   text-align: center;
@@ -177,8 +183,15 @@ blockquote:after {
 }
 @media screen and (min-width: 600px) {
   .von_neumann_small{display: none;} 
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky + .article_cool {
+    padding-top: 30px;
+  }
 }
-
 .von_neumann_small{
   font-size: 16px; 
   text-align: center;
@@ -202,7 +215,7 @@ blockquote:after {
   <p class = "von_neumann_small" style="margin-bottom: 0em;">Richard Feynman</p> 
 </header>
 
-<nav>
+<nav id="navbar">
   <ul>
     <li><a href="https://wayne86122488.github.io/">Me</a></li>
     <li><a style="background-color: #696969;" href="https://wayne86122488.github.io/research">Research</a></li>
@@ -212,8 +225,7 @@ blockquote:after {
   </ul>
 </nav>
 
-<section>
-<article>
+<article class="article_cool">
 <h2 style = "text-align: center"> Research </h2>
   
 <h3 style = "text-align: center"> My Research Interests </h3>
@@ -223,7 +235,21 @@ blockquote:after {
 <p style = "text-align: center"> TBA </p>
 
 </article>
-</section>
+
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>
 
 <footer>
   <p> <a style="color: white;" href = "mailto: wayne86122488@gapp.nthu.edu.tw"><img src="email.png" style="width:30px; height:30px;"></a> &ensp;&ensp;&ensp;  <a style="color: white;" href ="https://twitter.com/ChangHengWei3"><img src="twitter.png" style="width:30px; height:30px;"></a>  </p>
