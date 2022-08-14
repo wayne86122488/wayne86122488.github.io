@@ -131,16 +131,6 @@ p {
   padding: 0 4%;
 }
 
-.col_p{
-  line-height: 1.5em;
-  padding-left: 28%;
-  padding-right: 28%;
-  text-indent:2em; 
-  text-align: justify;
-  font-size: 18px;
-  width: 44%;
-  max-width: 40em;
-}
   
 blockquote {
     font-family: Georgia, serif;
@@ -181,15 +171,25 @@ blockquote:after {
     right: 0;
   }
 }
-
-.col_p{
-    line-height: 1.5em;
-    padding: 0 14%; 
-    text-indent:2em; 
-    text-align: justify;;
-    font-size: 18px;
-}
   
+.col_p{
+  line-height: 1.5em;
+  margin-left: 22%;
+  margin-right: 22%;
+  text-indent:2em; 
+  text-align: justify;
+  font-size: 18px;
+  width: 56%;
+  max-width: 50em;
+}
+@media screen and (max-width: 600px) {
+ .col_p{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 100%;
+    width: 90%;
+  }
+}
   
 </style>
 </head>
