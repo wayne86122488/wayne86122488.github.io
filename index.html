@@ -166,11 +166,11 @@ blockquote:after {
 }
 
 .col_p{
-    line-height: 1.5em;
-    padding: 0 14%; 
-    text-indent:2em; 
-    text-align: justify;;
-    font-size: 18px;
+  line-height: 1.5em;
+  padding: 0 14%; 
+  text-indent:2em; 
+  text-align: justify;;
+  font-size: 18px;
 }
 
 summary:hover{
@@ -218,6 +218,26 @@ details[open] > summary:after {
 .contact:hover{
     color:#c71e0f;
 }
+
+.von_neumann{
+  font-size: 18px; 
+  text-align: center;
+  color: #a5a5bb
+}
+@media screen and (min-width: 600px) {
+  .von_neumann_small{display: none;} 
+}
+
+.von_neumann_small{
+  font-size: 16px; 
+  text-align: center;
+  color: #a5a5bb;
+  margin-bottom: -0.8em;
+}
+@media screen and (max-width: 600px) {
+  .von_neumann{display: none;} 
+}
+
 </style>
 </head>
 
@@ -225,7 +245,10 @@ details[open] > summary:after {
   
 <header>
   <p><blockquote> You don't have to be responsible for the world that you're in. </blockquote></p>
-  <p style="font-size: 18px; text-align: center;color: #a5a5bb">- John von Neumann to Richard Feynman -</p>
+  <p class = "von_neumann">- John von Neumann to Richard Feynman -</p>
+  <p class = "von_neumann_small">John von Neumann</p>
+  <p class = "von_neumann_small">to</p>
+  <p class = "von_neumann_small" style="margin-bottom: 0em;">Richard Feynman</p> 
 </header>
 
 <nav>
@@ -238,13 +261,12 @@ details[open] > summary:after {
   </ul>
 </nav>
 
-<div class="column_small" style="background-color:#aaa;">
+<div class="column_small" style="background-color:#aaa; ">
     <br>
     <img src="123.png" style="width:157px; height: 157px; border-radius: 50%;">
     <h3 style="padding: 0 8%; text-align:center;">ABOUT ME</h3>
-    <p style="font-size:140%"> 張恆維 </p>	
-    <p style="font-size:140%"> Chang, Heng-Wei </p>
-    <p style="font-size:120%; color: #404040;"> Born in 1997 / Tainan </p>
+    <p style="font-size:120%; margin-bottom:-0.5em;"> 張恆維 / Chang, Heng-Wei</p>	
+    <p style="font-size:110%; margin-bottom:-0.5em; color: #323232;"> Born in 1997 CE / Tainan </p>
     <ul style="padding: 0 12%; text-align: center;line-height: 1.8em; color: #404040; list-style-type: none;">
       <li><details><summary>Aim to be a Theoretical Physicist</summary><br> <p>  Despite my interest in various aspects of physics, I now focus on the possibility of modified gravity theories to resolve the unsolved issues of Einstein's gravity, via all analytic, numerical, and statistical methods.  </p><br>  </details> </li>
       <li><details><summary>Extensive Taste of Knowledge</summary><br><p> Aside from my career-oriented interest in physics and mathematics, exploration for different varieties of knowledge also excites me, inclusive of anthropology, linguistics, and philosophy. </p><br>  </details> </li>
@@ -252,12 +274,12 @@ details[open] > summary:after {
       <li style = "font-size: 95%;">ᐅ Materialist with <a style="color: #404040" href="https://plato.stanford.edu/entries/contextualism-epistemology/">Epistemic Contextualim</a>? ᐊ</li> 
     </ul>
     <h3 style="padding: 0 8%; text-align:center;">LANGUAGES</h3>
-    <p  style = "font-size: 95%; color: #404040"> 21st Century Modern Standard Chinese Taiwan Accent </p>
-    <p  style = "font-size: 95%; color: #404040"> Modern Northern Taiwanese and Modern English </p>  
+    <p  style = "font-size: 95%; color: #404040"> 21st Cent. Modern Standard Chinese </p>
+    <p  style = "font-size: 95%; color: #404040"> Modern Northern Taiwanese </p>
+    <p  style = "font-size: 95%; color: #404040"> Modern English </p>    
     <h3 style="padding: 0 8%; text-align:center;">CONTACT</h3>
     <p style="color:#404040; font-size:95%; padding: 0 12%; text-align: center;"}> E-Mail ᐅ <a class="contact" href = "mailto: wayne86122488@gapp.nthu.edu.tw"> wayne86122488@gapp.nthu.edu.tw </a> </p>
-    <p style="color:#404040; font-size:95%; padding: 0 12%; text-align: center;"}> Twitter ᐅ <a class="contact" href = "https://twitter.com/ChangHengWei3"> https://twitter.com/ChangHengWei3 </a> </p>
-  </div>
+    <p style="color:#404040; font-size:95%; padding: 0 12%; text-align: center; margin-bottom: 3em;"}> Twitter ᐅ <a class="contact" style="color:#404040;" href = "https://twitter.com/ChangHengWei3"> https://twitter.com/ChangHengWei3 </a> </p>
 </div>
 
 <footer>
