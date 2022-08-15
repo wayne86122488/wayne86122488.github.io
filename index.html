@@ -231,22 +231,30 @@ ul li details > summary {
   list-style:  none !important;
   list-style-type:  none !important;
 }
+ul li details summary::-webkit-details-marker{
+  display: none;
+}
 ul li details > summary:before {
-    content: '▷ ';
+  font-size: 95%;
+  content: '▷ '
 }
 ul li details > summary:after {
-    content: ' ◁';
+  font-size: 95%;
+  content: ' ◁';
 }
 ul li details[open] > summary {
   list-style:  none !important;
   list-style-type: none !important;
+  font-size: 95%;
   color:  #575920;   
 }
 ul li details[open] > summary:before {
-    content: 'ᐁ ';
+  font-size: 95%;
+  content: 'ᐁ ';
 }
 ul li details[open] > summary:after {
-    content: ' ᐁ';
+  font-size: 95%;
+  content: ' ᐁ';
 }
 
 @media screen and (max-width: 600px) {
