@@ -196,7 +196,11 @@ input.wpcf7-form-control.wpcf7-submit {
    appearance:         none;
 }
 
-details > p{
+ul li details{
+  overflow: hidden;
+  float: center;
+}
+ul li details > p{
   width: 28em;
   padding: 0em 2em auto auto;
   margin: auto auto;
@@ -206,7 +210,7 @@ details > p{
   font-size: 17px;
   color: black;
 }
-details > summary {
+ul li details > summary {
   display: list-item;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -215,21 +219,21 @@ details > summary {
   list-style:  none !important;
   list-style-type:  none !important;
 }
-details > summary:before {
+ul li details > summary:before {
     content: '▷ ';
 }
-details > summary:after {
+ul li details > summary:after {
     content: ' ◁';
 }
-details[open] > summary {
+ul li details[open] > summary {
   list-style:  none !important;
   list-style-type: none !important;
   color:  #575920;   
 }
-details[open] > summary:before {
+ul li details[open] > summary:before {
     content: 'ᐁ ';
 }
-details[open] > summary:after {
+ul li details[open] > summary:after {
     content: ' ᐁ';
 }
 
