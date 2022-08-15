@@ -211,7 +211,7 @@ details > summary {
     -moz-appearance: none;
     appearance: none;
     font-size: 95%;
-    list-style-type:  none;
+    list-style-type:  none !important;
 }
 details > summary:before {
     content: '▷ ';
@@ -220,7 +220,7 @@ details > summary:after {
     content: ' ◁';
 }
 details[open] > summary {
-    list-style-type: none;
+    list-style-type: none !important;
     color:  #575920;   
 }
 details[open] > summary:before {
