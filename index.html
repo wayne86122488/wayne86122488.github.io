@@ -409,6 +409,41 @@ ul li details[open] > summary:after {
   opacity: 1;
 }
 
+.lang3{
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 95%; 
+  border: none;
+  background-color: #aaa;
+}
+.lang3 span{
+  color: #404040;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  text-align: center;
+  top: -0.4em;
+}
+.lang3 span:after {
+  font-size: 78%; 
+  color: #696969;
+  content:"BEGINNER";
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+  top: -1.1em;
+}
+.lang3:hover span {
+  color: #232323;
+  top: -0.8em;
+}
+.lang3:hover span:after {
+  top: 0.3em;
+  opacity: 1;
+}
+
 </style>
 </head>
 
@@ -450,7 +485,8 @@ ul li details[open] > summary:after {
     <h3 style="padding: 0 8%; text-align:center;">LANGUAGES</h3>
     <button class="lang"><span> 21st Cent. Modern Std. Chinese <br></span></button><br>
     <button class="lang1"><span> Modern Northern Taiwanese <br></span></button><br>
-    <button class="lang2"><span> Modern English <br></span></button>
+    <button class="lang2"><span> Modern English <br></span></button><br>
+    <button class="lang3"><span> Modern Japanese <br></span></button>
     <p style = "border-bottom: 1px solid grey; width: 16%; margin-left: 42%; margin-top: 0em;"> </p>
       
     <h3 style="text-align:center;">CONTACT</h3>
