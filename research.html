@@ -123,14 +123,40 @@ footer {
   color: white;
 }
 
-.column {
+.row{
+  display: fixed;
   float: left;
-  width: 33%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  background-color: #aaa;
+}
+.column_left {
+  float: left;
+  width: 50%;
+  padding: 1%;
+  min-height: 90vw;
+}
+.column_right {
+  float: right;
+  width: 50%;
+  padding: 1%;
+  min-height: 90vw;
 }
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+@media screen and (max-width: 615px) {
+  .column_left {
+    margin-left: 0%;
+    width: 50%;
+  }
+.column_right {
+    margin-right: 0%;
+    width: 50%;
+  }
 }
 
 table, th, td {
@@ -223,16 +249,19 @@ blockquote:after {
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.7);
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0s;
 }
 
 .overlay-content {
   position: relative;
-  top: 25%;
+  top: 20px;
   width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  background-color: black;
+  margin-top: 1em;
+  background-color: #dfeee2;
+  min-height: 100vh;
+  opacity: 0.82;
+  padding-right: 5%;
+  padding-left:  5%;
 }
 
 .overlay a {
@@ -241,7 +270,7 @@ blockquote:after {
   font-size: 36px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  transition: 0s;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -250,18 +279,19 @@ blockquote:after {
 
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  top: -20px;
+  right: 30px;
+  font-size: 7vw;
+  z-index: 3;
 }
 
 @media screen and (max-width: 600px) {
-  .overlay{right: 0px;}
+  .overlay{right: 2%;}
   .overlay a {font-size: 20px}
   .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+    font-size: 7vw;
+    top: -15px;
+    right: 30px;
   }
 }
 
@@ -291,48 +321,97 @@ blockquote:after {
 
 <article class="article_cool">
 
-<h2 style = "text-align: center"> Research </h3>
+<div class="row">
+  <h3 style = "text-align: center; font-size: 2.4vw; color:#313131"> My Research Interests </h3>  
+  <div class="column_left" style="background-color:#aaa;">
+    <p style = "text-align: center">  <span style="cursor:pointer" onclick="openTPP()">   <img src=" " style="width:90%; margin-left: 4%;">  <u style="font-size:2vw; text-decoration: none;">Theoretical Particle Physics</u></span></p>
+    <p style = "text-align: justify; color:#555; text-indent: 2em; margin-left:10%; margin-right: 10%; font-size: 1.2vw; height: 6vw;" > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. </p>
+    <p style = "text-align: center">  <span style="cursor:pointer" onclick="openCOSMOS()"><img src=" " style="width:90%; margin-left: 4%;">  <u style="font-size:2vw; text-decoration: none;">Cosmology</u></span> </p>
+    <p style = "text-align: justify; color:#555; text-indent: 2em; margin-left:10%; margin-right: 10%; font-size: 1.2vw; height: 6vw;" > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. </p>
+  </div>
+  <div class="column_right" style="background-color:#aaa;">
+    <p style = "text-align: center">  <span style="cursor:pointer" onclick="openCQG()">   <img src=" " style="width:90%; margin-right: 4%;">  <u style="font-size:2vw; text-decoration: none;">Classical and Quantum Gravity</u></span></p>
+    <p style = "text-align: justify; color:#555; text-indent: 2em; margin-left:10%; margin-right: 10%; font-size: 1.2vw; height: 6vw;" > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. </p>
+    <p style = "text-align: center">  <span style="cursor:pointer" onclick="openMP()">    <img src=" " style="width:90%; margin-right: 4%;">  <u style="font-size:2vw; text-decoration: none;">Mathematical Physics</u></span> </p>            
+    <p style = "text-align: justify; color:#555; text-indent: 2em; margin-left:10%; margin-right: 10%; font-size: 1.2vw; height: 6vw;" > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. </p>
+  </div>
 
-  
-<h3 style = "text-align: center"> My Research Interests </h3>
-<p style = "text-align: center">  <span style="cursor:pointer" onclick="openTPP()">Theoretical Particle Physics</span> </p>
-<p style = "text-align: center">  <span style="cursor:pointer" onclick="openCQG()">Classical and Quantum Gravity</span> </p>
-<p style = "text-align: center">  <span style="cursor:pointer" onclick="openCOSMOS()">Cosmology</span> </p>
-<p style = "text-align: center">  <span style="cursor:pointer" onclick="openMP()">Mathematical Physics</span> </p>
+  <p style = "text-align: center;font-size: 0.4vw;color:transparent"> --- </p>
+  <h3 style = "text-align: center; font-size: 2.4vw; color:#313131"> Publications </h3>
+  <p style = "text-align: center;font-size: 1.6vw;"> TBA </p>
+  <br>
+
+</div>
+
+
 
 <div id="TPP" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeTPP()">&times;</a>
   <div class="overlay-content">
-    <h2 style="color:white; padding-top: 2em; padding-bottom: 2em">Theoretical Particle Physics</h2>
+    <h2 style="color:#111; padding-top: 2em; padding-bottom: 1em; text-align:center; font-size: 4vw;"><nobr>Theoretical Particle Physics</nobr></h2>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;line-height: 2.4vw;">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. Sed quis neque felis. Vestibulum non dignissim enim. In vel dolor sem. Nulla ut ipsum pharetra, ultrices mauris quis, congue magna. Phasellus tristique elit quis iaculis viverra. Mauris efficitur consequat dapibus. Suspendisse a tortor ex. Aenean ut nisl vitae ligula ullamcorper pretium ut in elit. Cras non porttitor lacus. Phasellus eget maximus erat, vel accumsan nibh.
+    </p>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">  
+      Nullam non tellus at sapien euismod hendrerit eu sed lacus. Donec tristique porttitor laoreet. Mauris mattis bibendum nisi. Nam laoreet pharetra lorem, ac convallis sem consectetur eu. Duis in pharetra mi. Cras ac turpis est. Morbi vitae luctus odio, vel efficitur elit. Etiam vitae scelerisque mauris. Pellentesque ultricies, velit ut consectetur ornare, odio ex aliquam diam, sit amet venenatis sem justo eget dolor. Fusce maximus in nisl vitae porta. Nam sapien ante, congue non porta vitae, tincidunt eu urna. Donec quis aliquet dolor, in rutrum odio. Sed neque nisl, rhoncus in congue vitae, bibendum at nibh. Sed nec pellentesque lorem. Vivamus iaculis faucibus enim quis scelerisque. Curabitur a ligula ultricies, mollis libero sit amet, efficitur libero.
+    </p>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">    
+      Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
+    </p>
+    <br>
   </div>
 </div>
 
 <div id="CQG" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeCQG()">&times;</a>
   <div class="overlay-content">
-    <h2 style="color:white; padding-top: 2em; padding-bottom: 2em">Classical and Quantum Gravity</h2>
+    <h2 style="color:#111; padding-top: 2em; padding-bottom: 1em; text-align:center; font-size: 4vw;"><nobr>Classical and Quantum Gravity</nobr></h2>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;line-height: 2.4vw;">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. Sed quis neque felis. Vestibulum non dignissim enim. In vel dolor sem. Nulla ut ipsum pharetra, ultrices mauris quis, congue magna. Phasellus tristique elit quis iaculis viverra. Mauris efficitur consequat dapibus. Suspendisse a tortor ex. Aenean ut nisl vitae ligula ullamcorper pretium ut in elit. Cras non porttitor lacus. Phasellus eget maximus erat, vel accumsan nibh.
+    </p>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">  
+      Nullam non tellus at sapien euismod hendrerit eu sed lacus. Donec tristique porttitor laoreet. Mauris mattis bibendum nisi. Nam laoreet pharetra lorem, ac convallis sem consectetur eu. Duis in pharetra mi. Cras ac turpis est. Morbi vitae luctus odio, vel efficitur elit. Etiam vitae scelerisque mauris. Pellentesque ultricies, velit ut consectetur ornare, odio ex aliquam diam, sit amet venenatis sem justo eget dolor. Fusce maximus in nisl vitae porta. Nam sapien ante, congue non porta vitae, tincidunt eu urna. Donec quis aliquet dolor, in rutrum odio. Sed neque nisl, rhoncus in congue vitae, bibendum at nibh. Sed nec pellentesque lorem. Vivamus iaculis faucibus enim quis scelerisque. Curabitur a ligula ultricies, mollis libero sit amet, efficitur libero.
+    </p>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">    
+      Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
+    </p>
+    <br>
   </div>
 </div>
 
 <div id="COSMOS" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeCOSMOS()">&times;</a>
   <div class="overlay-content">
-    <h2 style="color:white; padding-top: 2em; padding-bottom: 2em">Cosmology</h2>
+    <h2 style="color:#111; padding-top: 2em; padding-bottom: 1em; text-align:center; font-size: 4vw;"><nobr>Cosmology</nobr></h2>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;line-height: 2.4vw;">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. Sed quis neque felis. Vestibulum non dignissim enim. In vel dolor sem. Nulla ut ipsum pharetra, ultrices mauris quis, congue magna. Phasellus tristique elit quis iaculis viverra. Mauris efficitur consequat dapibus. Suspendisse a tortor ex. Aenean ut nisl vitae ligula ullamcorper pretium ut in elit. Cras non porttitor lacus. Phasellus eget maximus erat, vel accumsan nibh.
+    </p>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">  
+      Nullam non tellus at sapien euismod hendrerit eu sed lacus. Donec tristique porttitor laoreet. Mauris mattis bibendum nisi. Nam laoreet pharetra lorem, ac convallis sem consectetur eu. Duis in pharetra mi. Cras ac turpis est. Morbi vitae luctus odio, vel efficitur elit. Etiam vitae scelerisque mauris. Pellentesque ultricies, velit ut consectetur ornare, odio ex aliquam diam, sit amet venenatis sem justo eget dolor. Fusce maximus in nisl vitae porta. Nam sapien ante, congue non porta vitae, tincidunt eu urna. Donec quis aliquet dolor, in rutrum odio. Sed neque nisl, rhoncus in congue vitae, bibendum at nibh. Sed nec pellentesque lorem. Vivamus iaculis faucibus enim quis scelerisque. Curabitur a ligula ultricies, mollis libero sit amet, efficitur libero.
+    </p>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">    
+      Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
+    </p>
+    <br>
   </div>
 </div>
 
 <div id="MP" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeMP()">&times;</a>
   <div class="overlay-content">
-    <h2 style="color:white; padding-top: 2em; padding-bottom: 2em">Mathematical Physics</h2>
+    <h2 style="color:#111; padding-top: 2em; padding-bottom: 1em; text-align:center; font-size: 4vw;"><nobr>Mathematical Physics</nobr></h2>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;line-height: 2.4vw;">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. Sed quis neque felis. Vestibulum non dignissim enim. In vel dolor sem. Nulla ut ipsum pharetra, ultrices mauris quis, congue magna. Phasellus tristique elit quis iaculis viverra. Mauris efficitur consequat dapibus. Suspendisse a tortor ex. Aenean ut nisl vitae ligula ullamcorper pretium ut in elit. Cras non porttitor lacus. Phasellus eget maximus erat, vel accumsan nibh.
+    </p>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">  
+      Nullam non tellus at sapien euismod hendrerit eu sed lacus. Donec tristique porttitor laoreet. Mauris mattis bibendum nisi. Nam laoreet pharetra lorem, ac convallis sem consectetur eu. Duis in pharetra mi. Cras ac turpis est. Morbi vitae luctus odio, vel efficitur elit. Etiam vitae scelerisque mauris. Pellentesque ultricies, velit ut consectetur ornare, odio ex aliquam diam, sit amet venenatis sem justo eget dolor. Fusce maximus in nisl vitae porta. Nam sapien ante, congue non porta vitae, tincidunt eu urna. Donec quis aliquet dolor, in rutrum odio. Sed neque nisl, rhoncus in congue vitae, bibendum at nibh. Sed nec pellentesque lorem. Vivamus iaculis faucibus enim quis scelerisque. Curabitur a ligula ultricies, mollis libero sit amet, efficitur libero.
+    </p>
+    <p style="color:#333; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">    
+      Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
+    </p>
+    <br>
   </div>
 </div>
-
-<br>
-
-<h3 style = "text-align: center"> Publications </h3>
-<p style = "text-align: center"> TBA </p>
-
 </article>
 
 <footer>
@@ -362,7 +441,7 @@ blockquote:after {
     if(widcon >= 615) {
       document.getElementById("TPP").style.width = "80%";
     } else {
-      document.getElementById("TPP").style.width = "100%";
+      document.getElementById("TPP").style.width = "96%";
     }
   } 
   function closeTPP() {
@@ -374,7 +453,7 @@ blockquote:after {
     if(widcon >= 615) {
       document.getElementById("CQG").style.width = "80%";
     } else {
-      document.getElementById("CQG").style.width = "100%";
+      document.getElementById("CQG").style.width = "96%";
     }
   } 
   function closeCQG() {
@@ -386,7 +465,7 @@ blockquote:after {
     if(widcon >= 615) {
       document.getElementById("COSMOS").style.width = "80%";
     } else {
-      document.getElementById("COSMOS").style.width = "100%";
+      document.getElementById("COSMOS").style.width = "96%";
     }
   } 
   function closeCOSMOS() {
@@ -398,7 +477,7 @@ blockquote:after {
     if(widcon >= 615) {
       document.getElementById("MP").style.width = "80%";
     } else {
-      document.getElementById("MP").style.width = "100%";
+      document.getElementById("MP").style.width = "96%";
     }
   } 
   function closeMP() {
