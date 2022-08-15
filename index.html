@@ -204,11 +204,16 @@ ul li details.wpcf7-form-control.wpcf7-submit {
 
 ul li details{
   overflow: hidden;
-  float: center;
+  float: none;
+  list-style:  none !important;
+  list-style-type:  none !important;
 }
 ul li details > p{
+  display: inline-block;
+  vertical-align: middle;
   width: 28em;
-  padding: 0em 2em auto auto;
+  padding-top: -1em;
+  padding-bottom: 1em;
   margin: auto auto;
   line-height: 1.3em;
   text-indent:2em; 
@@ -217,9 +222,10 @@ ul li details > p{
   color: black;
 }
 ul li details > summary {
-  display: list-item;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  float: none;
+  display: list-item !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
   appearance: none;
   font-size: 95%;
   list-style:  none !important;
@@ -249,7 +255,7 @@ ul li details[open] > summary:after {
     padding-right: 2px;
     width: 100%;
     text-align: justify;
-}
+  }
 }
 
 .contact{
@@ -330,10 +336,12 @@ ul li details[open] > summary:after {
     <p  style = "font-size: 95%; color: #404040"> 21st Cent. Modern Standard Chinese </p>
     <p  style = "font-size: 95%; color: #404040"> Modern Northern Taiwanese </p>
     <p  style = "font-size: 95%; color: #404040"> Modern English </p>    
+    <p style = "border-bottom: 1px solid grey; width: 16%; margin-left: 42%; margin-top: 0em;"> </p>
     <h3 style="padding: 0 8%; text-align:center;">CONTACT</h3>
     <p style="color:#404040; font-size:95%; padding: 0 12%; text-align: center;"}> E-Mail ᐅ <a class="contact" href = "mailto: wayne86122488@gapp.nthu.edu.tw"> wayne86122488@gapp.nthu.edu.tw </a> </p>
-    <p style="color:#404040; font-size:95%; padding: 0 12%; text-align: center; margin-bottom: 3em;"}> Twitter ᐅ <a class="contact" style="color:#404040;" href = "https://twitter.com/ChangHengWei3"> https://twitter.com/ChangHengWei3 </a> </p>
-</div>
+    <p style="color:#404040; font-size:95%; padding: 0 12%; text-align: center; margin-bottom: 0em;"}> Twitter ᐅ <a class="contact" style="color:#404040;" href = "https://twitter.com/ChangHengWei3"> https://twitter.com/ChangHengWei3 </a> </p>
+    <p style = "border-bottom: 1px solid grey; width: 12%; margin-left: 44%; margin-bottom: 3em;"> </p>
+  </div>
 
 <footer>
   <p> <a style="color: white;" href = "mailto: wayne86122488@gapp.nthu.edu.tw"><img src="email.png" style="width:30px; height:30px;"></a> &ensp;&ensp;&ensp;  <a style="color: white;" href ="https://twitter.com/ChangHengWei3"><img src="twitter.png" style="width:30px; height:30px;"></a>  </p>
