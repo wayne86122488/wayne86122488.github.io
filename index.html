@@ -207,14 +207,20 @@ details > p{
 }
 details > summary {
     font-size: 95%;
-    list-style-type:  '\25B7  ';
+    list-style-type:  none;
+}
+details > summary:before {
+    content: 'ᐅ ';
 }
 details > summary:after {
-    content: ' \25C1';
+    content: ' ᐊ';
 }
 details[open] > summary {
-    list-style-type: 'ᐁ ';
-    color:  #575920;
+    list-style-type: none;
+    color:  #575920;   
+}
+details[open] > summary:before {
+    content: 'ᐁ ';
 }
 details[open] > summary:after {
     content: ' ᐁ';
