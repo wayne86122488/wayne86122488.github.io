@@ -232,7 +232,74 @@ blockquote:after {
   .von_neumann{display: none;} 
 }
 
+summary:hover{
+  cursor: pointer;
+  color: #c71e0f;
+}
 
+.int_par{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+details.wpcf7-form-control.wpcf7-submit {
+  -webkit-appearance: none !important;
+  -moz-appearance:    none !important;
+  appearance:         none !important;
+}
+details{
+  overflow: hidden;
+  float: none;
+  list-style:  none !important;
+  list-style-type:  none !important;
+}
+details > p{
+  display: inline-block;
+  vertical-align: middle;
+  width: 28em;
+  padding-top: -1em;
+  padding-bottom: 1em;
+  margin: auto auto;
+  line-height: 1.3em;
+  text-indent:2em; 
+  text-align: justify;
+  font-size: 17px;
+  color: black;
+}
+details > summary {
+  float: none;
+  display: list-item !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none;
+  font-size: 95%;
+  list-style:  none !important;
+  list-style-type:  none !important;
+}
+details summary::-webkit-details-marker{
+  display: none;
+}
+details > summary:before {
+  font-size: 95%;
+  content: '▷ ';
+}
+details > summary:after {
+  font-size: 95%;
+  content: ' ◁';
+}
+details[open] > summary {
+  list-style:  none !important;
+  list-style-type: none !important;
+  font-size: 95%;
+  color:  #575920;   
+}
+details[open] > summary:before {
+  font-size: 95%;
+  content: 'ᐁ ';
+}
+details[open] > summary:after {
+  font-size: 95%;
+  content: ' ᐁ';
+}
 
 </style>
 </head>
@@ -260,34 +327,43 @@ blockquote:after {
 <article class="article_cool">
 <h2 style="text-align:center"> Non-Academic Articles </h2>
  
-<h2 style="text-align: center;">Who am I?</h2>
-<p  class="col_p">  A Difficult Question. </p>  
-<p  class="col_p">  
-  If you ask my friends, then they're likely going to tell you Heng-Wei, 
-  but these seven letters only have 7 bytes of information about me, which certainly cannot make you acquainted with me, can it?
-  How about telling my hobits and professional interests, 
-  which you should be able in the <a style = "color: #d6522d" href="https://wayne86122488.github.io/">main page</a>, the <a style = "color: #d6522d" href="https://wayne86122488.github.io/research">Research</a>, and the <a style = "color: #d6522d" href="https://wayne86122488.github.io/notes">Notes</a> page?
-  Maybe, not really?
-</p>
-<p  class="col_p">  
-  Would my actions, with their cost and prizes, tell you who I could be, 
-  which are partly summarized in my <a style = "color: #d6522d" href="https://wayne86122488.github.io/cv">CV</a>?
-  Would my wills, which possibly could only be observed via myself and might be revealed in <a style = "color: #d6522d" href="https://wayne86122488.github.io/essays">Articles</a>,
-  be helpful in this problem? Would the combination of all of these do?
-</p>
-<p  class="col_p">  
-  At this point, you could have seize some portion of me with the above texts, but not by the information itself provided by these paragraphs. 
-  And some enjoy with these, while some get really annoyed by them. 
-  But, at the end of the day, we have to choose the companion, with whom we can go on, 
-  in order to resolve the biological, or chemical, sense of solitude holding communities in the social world tight that (temporarily?) wins Homo sapiens the game of evolution.
-</p>    
-<p  class="col_p">  
-  Please feel free to email me if you have similar thoughts. 
-</p>
-<p  class="col_p">  
-  Oh, by the way, I don't really know who I am, perhaps in any contextual level.
-  But, you may already discover: that's not even the point of this article at all.
-</p>
+<div class="int_par">
+  <p style = "border-bottom: 2px solid #979797; width: 32%; margin-left: 34%; margin-top: 0.8em;"> </p>
+  <h2 style="text-align: center;">Who am I?</h2>
+  <details style="text-align: center;">
+    <summary>
+      READ MORE
+    </summary>
+    <p  class="col_p">  A Difficult Question. </p> 
+    <p  class="col_p">  
+      If you ask my friends, then they're likely going to tell you Heng-Wei, 
+      but these seven letters only have 7 bytes of information about me, which certainly cannot make you acquainted with me, can it?
+      How about telling my hobits and professional interests, 
+      which you should be able in the <a style = "color: #d6522d" href="https://wayne86122488.github.io/">main page</a>, the <a style = "color: #d6522d" href="https://wayne86122488.github.io/research">Research</a>, and the <a style = "color: #d6522d" href="https://wayne86122488.github.io/notes">Notes</a> page?
+      Maybe, not really?
+    </p>
+    <p  class="col_p">  
+      Would my actions, with their cost and prizes, tell you who I could be, 
+      which are partly summarized in my <a style = "color: #d6522d" href="https://wayne86122488.github.io/cv">CV</a>?
+      Would my wills, which possibly could only be observed via myself and might be revealed in <a style = "color: #d6522d" href="https://wayne86122488.github.io/essays">Articles</a>,
+      be helpful in this problem? Would the combination of all of these do?
+    </p>
+    <p  class="col_p">  
+      At this point, you could have seize some portion of me with the above texts, but not by the information itself provided by these paragraphs. 
+      And some enjoy with these, while some get really annoyed by them. 
+      But, at the end of the day, we have to choose the companion, with whom we can go on, 
+      in order to resolve the biological, or chemical, sense of solitude holding communities in the social world tight that (temporarily?) wins Homo sapiens the game of evolution.
+    </p>    
+    <p  class="col_p">  
+      Please feel free to email me if you have similar thoughts. 
+    </p>
+    <p  class="col_p">  
+      Oh, by the way, I don't really know who I am, perhaps in any contextual level.
+      But, you may already discover: that's not even the point of this article at all.
+    </p>
+  </details>
+  <p style = "border-bottom: 2px solid #979797; width: 32%; margin-left: 34%; margin-bottom: 0.8em;"> </p>
+</div>
 
 </article>
 
