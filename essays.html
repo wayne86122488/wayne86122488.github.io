@@ -304,6 +304,13 @@ details[open] > summary:after {
   content: ' ᐁ';
 }
 
+.hyperlinkhere{
+  color:black;
+}
+.hyperlinkhere:hover{
+  color:#c71e0f;
+}
+
 </style>
 </head>
 
@@ -390,7 +397,7 @@ details[open] > summary:after {
       3. 源氏物語(げんじものがたり).
     </p> 
   </details>
-  <p style="font-size:14px; text-align: left; padding-left: 55%;color:#696969"> DATE : END OF MY LIFE</p>
+  <p style="font-size:14px; text-align: left; padding-left: 55%;color:#696969"> DATE : END OF MY LIFE (SCHEDULED)</p>
 </div>
 <div class="int_par">
   <p style = "border-bottom: 2px solid #979797; width: 32%; margin-left: 34%; margin-top: 0.8em;"> </p>
@@ -421,15 +428,34 @@ details[open] > summary:after {
       in fact, infinitely many personalization options based on your own programming ability.
       I myself regard personalization as the freedom to choose what one needs with the minimal necessities,
       and this freedom is something you cannot find on closed source OS because of the difficulties in program development.
-      For example, 
-      Instead of a specific OS, Linux is a family of operating systems based on Linux kernel.
+      For example, in Windows, you don't have the option to change your windows environment,
+      but in Linux, you can even start without any windows environment, or choose the display server, such as X.Org, that you are fond of.
+    </p>  
+    <p  class="col_p">    
+      But this does mean that you have to pick everything from the bottom up.
+      Instead of a specific OS, Linux is a family of operating systems, called Distributions,
+      developed and maintained by communities with different believes based on the Linux kernel. 
+      For instance, minimalist would consider Arch for its simplicity.
+      One may choose Red Hat Enterprise Linux (RHEL) if support from a professional company is needed.
+      I myself use Fedora as workstation, for its blance between advantures and maintainability.
+    </p>  
+    <p  class="col_p">  
+      Furthermore, in Windows, softwares are difficult to install: 
+      you have to find where to download and sometimes fail to install one without knowing why it fails.
+      In Linux, softwares you need are almost available via your "package manager",
+      and you can install them with a single line of command.
+      Also, due to the license, when an installation fails, you'd likely to know why it fails, such as package dependencies.
+      Of course, you can even choose the package manager you like (or even make yourself one),
+      which includes APT, YUM, RPM, DPKG, DNF, PACKMAN, etc.
+      I personally use <a class="hyperlinkhere" href="https://flatpak.org"> FLATPAK </a> for most creativity and gaming applications,
+      for safety, maintainability, and its indepedence of distributions and versions.
     </p>  
     <p  class="col_p">  
       But always remember, with great power comes great responsibility.
     </p>  
     <p  class="col_p">  
       Secondly, you get a much safer operating system, for the sake of instrumental decentralization.
-      It's clear that, if there're thousands of operating systems roughly equal installed, 
+      It's because of that, if there're thousands of operating systems roughly equal installed, 
       vicious programs will be extremely difficult to design in the very beginning. 
       Metaphorically speaking, if the doors in your settlement are installed with thousands of lock types,
       then a thief have to prepare thousands of lockpicks to possibily break in your house,
@@ -441,10 +467,14 @@ details[open] > summary:after {
     </p>  
     <p  class="col_p">  
       In fact, it's much more than that.
-      In this era of information, the largest thief might be those who build your house and make your door.  
+      In this era of information, the largest thief might be those who build your house and make your door. 
+      And the only way to prevent the builders of your OS to earn fortune from your information without your consensus
+      is that everyone using this OS can inspect how it's built and even modify some part of it, like to change the keyhole-key pair.
+      
     </p> 
     <p  class="col_p">  
       Thridly, you make the first step on building servers and using supercomputers.
+      I am no expert at servers and supercomputers, but it does sound nice, right?
     </p>
     <p  class="col_p">  
       In this article, I didn't and will not discuss what is Linux, since there're much better resouces 
