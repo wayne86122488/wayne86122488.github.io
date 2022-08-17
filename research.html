@@ -278,20 +278,46 @@ blockquote:after {
 }
 
 .overlay .closebtn {
-  position: absolute;
-  top: -20px;
-  right: 30px;
+  position: relative;
+  top: 1vw;
+  left: 70vw;
   font-size: 7vw;
   z-index: 100;
 }
-
-@media screen and (max-width: 600px) {
+.overlay .closebtn2{
+  position: relative; 
+  bottom:2vw; 
+  font-size: 1.4vw;
+  width:10vw; 
+  background-color:#d4d411; 
+  color:white; 
+  margin-top:1vw; 
+  margin-bottom:1vw; 
+  margin-left:auto; 
+  margin-right: auto; 
+  padding-top: 1vw; 
+  padding-left: 1vw; 
+  padding-bottom:1vw; 
+  padding-right:1vw; 
+  border-radius: 0.5vw;
+  text-align: center; 
+  z-index: 100;
+  opacity: 1; 
+  font-weight: bold;
+}
+.overlay .closebtn2:hover{
+  background-color:#969611;
+}
+@media screen and (max-width: 615px) {
   .overlay{right: 2%;}
   .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 7vw;
     top: -15px;
     right: 30px;
+  }
+  .overlay .closebtn2 {
+    font-size: 7vw;
   }
 }
 
@@ -339,11 +365,13 @@ blockquote:after {
 }
 
 .text2 {
+  transition: .3s ease;
   color:#a4add1 ;
   font-size: 4vw;
   position: absolute;
   top: 50%;
   left: 50%;
+  opacity: 0;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -389,9 +417,8 @@ blockquote:after {
       <div class = "container2">
       <img src="theo_part_phy.png" style="  display: block; width: 100%; height: auto;">  
       <span style="cursor:pointer" onclick="openTPP()">  
-        <div class = "overlay2">
-          <div class = "text2"> INTEREST </div>
-        </div>
+        <div class = "overlay2"></div>
+        <div class = "text2"> MORE </div>
       </span>
       </div>
     </p>
@@ -403,12 +430,11 @@ blockquote:after {
     </p>
     <p style = "margin-top:0.8vw; margin-bottom:0.8vw; text-align: center">  
       <div class = "container2">
-      <img src="cosmos.png" style="  display: block; width: 100%; height: auto;">  
-      <span style="cursor:pointer" onclick="openCOSMOS()">  
-        <div class = "overlay2">
-          <div class = "text2"> INTEREST </div>
-        </div>
-      </span>
+        <img src="cosmos.png" style="  display: block; width: 100%; height: auto;">  
+        <span style="cursor:pointer" onclick="openCOSMOS()">  
+          <div class = "overlay2"> </div>
+          <div class = "text2"> MORE </div>
+        </span>
       </div>
     </p>
     <p style="font-size:2vw; text-decoration: none; margin-bottom:0.8vw; text-align: center;"> Cosmology </p> 
@@ -423,9 +449,8 @@ blockquote:after {
       <div class = "container2">
       <img src="grav.png" style="  display: block; width: 100%; height: auto;">  
       <span style="cursor:pointer" onclick="openCQG()">  
-        <div class = "overlay2">
-          <div class = "text2"> INTEREST </div>
-        </div>
+        <div class = "overlay2"></div>
+        <div class = "text2"> MORE </div>
       </span>
       </div>
     </p>
@@ -440,9 +465,8 @@ blockquote:after {
       <div class = "container2">
       <img src="math_phys.png" style="  display: block; width: 100%; height: auto;">  
       <span style="cursor:pointer" onclick="openMP()">  
-        <div class = "overlay2">
-          <div class = "text2"> INTEREST </div>
-        </div>
+        <div class = "overlay2"></div>
+        <div class = "text2"> MORE </div>
       </span>
       </div>
     </p>
@@ -477,6 +501,7 @@ blockquote:after {
       Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
     </p>
     <br>
+    <a href="javascript:void(0)" class="closebtn2" onclick="closeTPP()">  Close &times; </a>
   </div>
 </div>
 
@@ -494,6 +519,7 @@ blockquote:after {
       Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
     </p>
     <br>
+    <a href="javascript:void(0)" class="closebtn2" onclick="closeCQG()">  Close &times; </a>
   </div>
 </div>
 
@@ -511,6 +537,7 @@ blockquote:after {
       Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
     </p>
     <br>
+    <a href="javascript:void(0)" class="closebtn2" onclick="closeCOSMOS()">  Close &times; </a>
   </div>
 </div>
 
@@ -528,6 +555,7 @@ blockquote:after {
       Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
     </p>
     <br>
+    <a href="javascript:void(0)" class="closebtn2" onclick="closeMP()">  Close &times; </a>
   </div>
 </div>
 </article>
