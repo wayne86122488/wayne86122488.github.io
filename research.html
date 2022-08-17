@@ -317,9 +317,46 @@ blockquote:after {
     right: 30px;
   }
   .overlay .closebtn2 {
-    font-size: 7vw;
+    width: 35vw;
+    font-size: 5vw;
   }
 }
+
+.overlay .overhead{
+    color:#111; 
+    padding-top: 2em; 
+    padding-bottom: 1em; 
+    text-align:center; 
+    font-size: 4vw;
+}
+
+.overlay .overlaytext{
+  color:#333; 
+  -webkit-hyphens: auto; 
+  -moz-hyphens: auto; 
+  hyphens: auto; 
+  margin-top: 0em; 
+  text-align: justify; 
+  font-size: 1.7vw; 
+  text-indent: 4vw;
+  line-height: 2.4vw;
+}
+@media screen and (max-width: 615px) {
+  .overlay .overlayhead{ 
+    font-size: 1.2em;
+  } 
+  .overlay .overlaytext{  
+    -webkit-hyphens: auto; 
+    -moz-hyphens: auto; 
+    hyphens: auto; 
+    text-align: justify; 
+    font-size: 0.9em; 
+    text-indent: 2em;
+    line-height: 1.3em;
+  }
+}
+
+
 
 .underwear{
   line-height: 1.6vw ;
@@ -491,13 +528,13 @@ blockquote:after {
   <a href="javascript:void(0)" class="closebtn" onclick="closeTPP()">&times;</a>
   <div class="overlay-content">
     <h2 style="color:#111; padding-top: 2em; padding-bottom: 1em; text-align:center; font-size: 4vw;"><nobr>Theoretical Particle Physics</nobr></h2>
-    <p style="color:#333; -webkit-hyphens: auto; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;line-height: 2.4vw;">
+    <p class="overlaytext">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. Sed quis neque felis. Vestibulum non dignissim enim. In vel dolor sem. Nulla ut ipsum pharetra, ultrices mauris quis, congue magna. Phasellus tristique elit quis iaculis viverra. Mauris efficitur consequat dapibus. Suspendisse a tortor ex. Aenean ut nisl vitae ligula ullamcorper pretium ut in elit. Cras non porttitor lacus. Phasellus eget maximus erat, vel accumsan nibh.
     </p>
-    <p style="color:#333; -webkit-hyphens: auto ;hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">  
+    <p class="overlaytext">
       Nullam non tellus at sapien euismod hendrerit eu sed lacus. Donec tristique porttitor laoreet. Mauris mattis bibendum nisi. Nam laoreet pharetra lorem, ac convallis sem consectetur eu. Duis in pharetra mi. Cras ac turpis est. Morbi vitae luctus odio, vel efficitur elit. Etiam vitae scelerisque mauris. Pellentesque ultricies, velit ut consectetur ornare, odio ex aliquam diam, sit amet venenatis sem justo eget dolor. Fusce maximus in nisl vitae porta. Nam sapien ante, congue non porta vitae, tincidunt eu urna. Donec quis aliquet dolor, in rutrum odio. Sed neque nisl, rhoncus in congue vitae, bibendum at nibh. Sed nec pellentesque lorem. Vivamus iaculis faucibus enim quis scelerisque. Curabitur a ligula ultricies, mollis libero sit amet, efficitur libero.
     </p>
-    <p style="color:#333; -webkit-hyphens: auto; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">    
+    <p class="overlaytext">
       Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
     </p>
     <br>
@@ -509,13 +546,13 @@ blockquote:after {
   <a href="javascript:void(0)" class="closebtn" onclick="closeCQG()">&times;</a>
   <div class="overlay-content">
     <h2 style="color:#111; padding-top: 2em; padding-bottom: 1em; text-align:center; font-size: 4vw;"><nobr>Classical and Quantum Gravity</nobr></h2>
-    <p style="color:#333; -webkit-hyphens: auto; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;line-height: 2.4vw;">
+    <p class="overlaytext">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. Sed quis neque felis. Vestibulum non dignissim enim. In vel dolor sem. Nulla ut ipsum pharetra, ultrices mauris quis, congue magna. Phasellus tristique elit quis iaculis viverra. Mauris efficitur consequat dapibus. Suspendisse a tortor ex. Aenean ut nisl vitae ligula ullamcorper pretium ut in elit. Cras non porttitor lacus. Phasellus eget maximus erat, vel accumsan nibh.
     </p>
-    <p style="color:#333; -webkit-hyphens: auto; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">  
+    <p class="overlaytext">
       Nullam non tellus at sapien euismod hendrerit eu sed lacus. Donec tristique porttitor laoreet. Mauris mattis bibendum nisi. Nam laoreet pharetra lorem, ac convallis sem consectetur eu. Duis in pharetra mi. Cras ac turpis est. Morbi vitae luctus odio, vel efficitur elit. Etiam vitae scelerisque mauris. Pellentesque ultricies, velit ut consectetur ornare, odio ex aliquam diam, sit amet venenatis sem justo eget dolor. Fusce maximus in nisl vitae porta. Nam sapien ante, congue non porta vitae, tincidunt eu urna. Donec quis aliquet dolor, in rutrum odio. Sed neque nisl, rhoncus in congue vitae, bibendum at nibh. Sed nec pellentesque lorem. Vivamus iaculis faucibus enim quis scelerisque. Curabitur a ligula ultricies, mollis libero sit amet, efficitur libero.
     </p>
-    <p style="color:#333;-webkit-hyphens: auto; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">    
+    <p class="overlaytext">
       Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
     </p>
     <br>
@@ -527,13 +564,13 @@ blockquote:after {
   <a href="javascript:void(0)" class="closebtn" onclick="closeCOSMOS()">&times;</a>
   <div class="overlay-content">
     <h2 style="color:#111; padding-top: 2em; padding-bottom: 1em; text-align:center; font-size: 4vw;"><nobr>Cosmology</nobr></h2>
-    <p style="color:#333;-webkit-hyphens: auto; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">
+    <p class="overlaytext">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. Sed quis neque felis. Vestibulum non dignissim enim. In vel dolor sem. Nulla ut ipsum pharetra, ultrices mauris quis, congue magna. Phasellus tristique elit quis iaculis viverra. Mauris efficitur consequat dapibus. Suspendisse a tortor ex. Aenean ut nisl vitae ligula ullamcorper pretium ut in elit. Cras non porttitor lacus. Phasellus eget maximus erat, vel accumsan nibh.
     </p>
-    <p style="color:#333;-webkit-hyphens: auto; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">  
+    <p class="overlaytext">
       Nullam non tellus at sapien euismod hendrerit eu sed lacus. Donec tristique porttitor laoreet. Mauris mattis bibendum nisi. Nam laoreet pharetra lorem, ac convallis sem consectetur eu. Duis in pharetra mi. Cras ac turpis est. Morbi vitae luctus odio, vel efficitur elit. Etiam vitae scelerisque mauris. Pellentesque ultricies, velit ut consectetur ornare, odio ex aliquam diam, sit amet venenatis sem justo eget dolor. Fusce maximus in nisl vitae porta. Nam sapien ante, congue non porta vitae, tincidunt eu urna. Donec quis aliquet dolor, in rutrum odio. Sed neque nisl, rhoncus in congue vitae, bibendum at nibh. Sed nec pellentesque lorem. Vivamus iaculis faucibus enim quis scelerisque. Curabitur a ligula ultricies, mollis libero sit amet, efficitur libero.
     </p>
-    <p style="color:#333;-webkit-hyphens: auto; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">    
+    <p class="overlaytext">
       Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
     </p>
     <br>
@@ -545,13 +582,13 @@ blockquote:after {
   <a href="javascript:void(0)" class="closebtn" onclick="closeMP()">&times;</a>
   <div class="overlay-content">
     <h2 style="color:#111; padding-top: 2em; padding-bottom: 1em; text-align:center; font-size: 4vw;"><nobr>Mathematical Physics</nobr></h2>
-    <p style="color:#333; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;line-height: 2.4vw;">
+    <p class="overlaytext">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. Nullam a tortor non sapien venenatis vestibulum. Sed quis neque felis. Vestibulum non dignissim enim. In vel dolor sem. Nulla ut ipsum pharetra, ultrices mauris quis, congue magna. Phasellus tristique elit quis iaculis viverra. Mauris efficitur consequat dapibus. Suspendisse a tortor ex. Aenean ut nisl vitae ligula ullamcorper pretium ut in elit. Cras non porttitor lacus. Phasellus eget maximus erat, vel accumsan nibh.
     </p>
-    <p style="color:#333; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">  
+    <p class="overlaytext">
       Nullam non tellus at sapien euismod hendrerit eu sed lacus. Donec tristique porttitor laoreet. Mauris mattis bibendum nisi. Nam laoreet pharetra lorem, ac convallis sem consectetur eu. Duis in pharetra mi. Cras ac turpis est. Morbi vitae luctus odio, vel efficitur elit. Etiam vitae scelerisque mauris. Pellentesque ultricies, velit ut consectetur ornare, odio ex aliquam diam, sit amet venenatis sem justo eget dolor. Fusce maximus in nisl vitae porta. Nam sapien ante, congue non porta vitae, tincidunt eu urna. Donec quis aliquet dolor, in rutrum odio. Sed neque nisl, rhoncus in congue vitae, bibendum at nibh. Sed nec pellentesque lorem. Vivamus iaculis faucibus enim quis scelerisque. Curabitur a ligula ultricies, mollis libero sit amet, efficitur libero.
     </p>
-    <p style="color:#333; hyphens: auto; margin-top: 0em; text-align: justify; font-size: 1.7vw; text-indent: 4vw;">    
+    <p class="overlaytext">
       Pellentesque consectetur pharetra posuere. Maecenas eget ante vehicula, tempor urna nec, sodales ante. Fusce tellus tortor, suscipit commodo molestie sit amet, malesuada quis lorem. Morbi vestibulum vehicula pharetra. Praesent at odio sit amet augue porttitor elementum nec at urna. Vivamus a odio faucibus, placerat urna eget, egestas urna. Pellentesque sed aliquam nunc. 
     </p>
     <br>
