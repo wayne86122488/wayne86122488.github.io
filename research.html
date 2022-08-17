@@ -243,7 +243,7 @@ blockquote:after {
   height: 90%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 10%;
   right: 10%;
   background-color: rgb(0,0,0);
@@ -282,7 +282,7 @@ blockquote:after {
   top: -20px;
   right: 30px;
   font-size: 7vw;
-  z-index: 3;
+  z-index: 100;
 }
 
 @media screen and (max-width: 600px) {
@@ -315,6 +315,46 @@ blockquote:after {
   }
 }
 
+.container2 {
+  position: relative;
+  width: 32vw; 
+  height: 32vw; 
+  margin-left: 4vw;
+  margin-bottom:0.8vw;
+  z-index: 1; 
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto; 
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #5b522e;
+  cursor:pointer;
+}
+
+.text2 {
+  color:#a4add1 ;
+  font-size: 4vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container2:hover .overlay2 {
+  opacity: 0.85;
+}
+.container2:hover .text2 {
+  opacity: 1;
+}
 
 </style>
 </head>
@@ -329,7 +369,7 @@ blockquote:after {
   <p class = "von_neumann_small" style="margin-bottom: 0em;">Richard Feynman</p> 
 </header>
 
-<nav id="navbar">
+<nav id="navbar" style="z-index: 2;">
   <ul>
     <li><a href="https://wayne86122488.github.io/">Me</a></li>
     <li><a style="background-color: #696969;" href="https://wayne86122488.github.io/research">Research</a></li>
@@ -344,13 +384,33 @@ blockquote:after {
 <div class="row">
   <h3 style = "text-align: center; font-size: 2.4vw; color:#313131"> My Research Interests </h3>  
   <div class="column_left" style="background-color:#aaa;">
-    <p style = "margin-top:0.8vw; margin-bottom:0.8vw; text-align: center">  <span style="cursor:pointer" onclick="openTPP()">   <img src="theo_part_phy.png" style="margin-bottom:0.8vw; width:90%; margin-left: 4%;">  <u style="font-size:2vw; text-decoration: none; margin-bottom:0.8vw;"> Theoretical Particle Physics</u></span></p>
+    <p style = "margin-top:0.8vw; margin-bottom:0.8vw; text-align: center">  
+      <div class = "container2">
+      <img src="theo_part_phy.png" style="  display: block; width: 100%; height: auto;">  
+      <span style="cursor:pointer" onclick="openTPP()">  
+        <div class = "overlay2">
+          <div class = "text2"> INTEREST </div>
+        </div>
+      </span>
+      </div>
+    </p>
+    <p style="font-size:2vw; text-decoration: none; margin-bottom:0.8vw; text-align: center;"> Theoretical Particle Physics </p> 
     <p class = "underwear" > 
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet odio tortor, 
       ac lobortis ante facilisis eget. Fusce vel sem fringilla erat maximus posuere. 
       Nullam a tortor non sapien venenatis vestibulum. 
     </p>
-    <p style = "margin-top:0.8vw;margin-bottom:0.8vw; text-align: center">  <span style="cursor:pointer" onclick="openCOSMOS()"><img src="cosmos.png" style="margin-bottom:0.8vw;width:90%; margin-left: 4%;">  <u style="font-size:2vw; text-decoration: none;margin-bottom:0.8vw;">Cosmology</u></span> </p>
+    <p style = "margin-top:0.8vw; margin-bottom:0.8vw; text-align: center">  
+      <div class = "container2">
+      <img src="cosmos.png" style="  display: block; width: 100%; height: auto;">  
+      <span style="cursor:pointer" onclick="openCOSMOS()">  
+        <div class = "overlay2">
+          <div class = "text2"> INTEREST </div>
+        </div>
+      </span>
+      </div>
+    </p>
+    <p style="font-size:2vw; text-decoration: none; margin-bottom:0.8vw; text-align: center;"> Cosmology </p> 
     <p class = "underwear" > 
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Aenean laoreet odio tortor, ac lobortis ante facilisis eget. 
@@ -359,14 +419,36 @@ blockquote:after {
     </p>
   </div>
   <div class="column_right" style="background-color:#aaa;">
-    <p style = "margin-top:0.8vw;margin-bottom:0.8vw; text-align: center">  <span style="cursor:pointer" onclick="openCQG()">   <img src="grav.png" style="margin-bottom:0.8vw;width:90%; margin-right: 4%;">  <u style="font-size:2vw; text-decoration: none;margin-bottom:0.8vw;">Classical and Quantum Gravity</u></span></p>
+    <p style = "margin-top:0.8vw; margin-bottom:0.8vw; text-align: center">  
+      <div class = "container2">
+      <img src="grav.png" style="  display: block; width: 100%; height: auto;">  
+      <span style="cursor:pointer" onclick="openCQG()">  
+        <div class = "overlay2">
+          <div class = "text2"> INTEREST </div>
+        </div>
+      </span>
+      </div>
+    </p>
+    <p style="font-size:2vw; text-decoration: none; margin-bottom:0.8vw; text-align: center;"> Classical and Quantum Gravity </p> 
+
     <p class = "underwear" > 
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Aenean laoreet odio tortor, ac lobortis ante facilisis eget. 
       Fusce vel sem fringilla erat maximus posuere. 
       Nullam a tortor non sapien venenatis vestibulum. 
     </p>
-    <p style = "margin-top:0.8vw;margin-bottom:0.8vw; text-align: center">  <span style="cursor:pointer" onclick="openMP()">    <img src="math_phys.png" style="margin-bottom:0.8vw; width:90%; margin-right: 4%;">  <u style="font-size:2vw; text-decoration: none;margin-bottom:0.8vw;">Mathematical Physics</u></span> </p>            
+    <p style = "margin-top:0.8vw; margin-bottom:0.8vw; text-align: center">  
+      <div class = "container2">
+      <img src="math_phys.png" style="  display: block; width: 100%; height: auto;">  
+      <span style="cursor:pointer" onclick="openMP()">  
+        <div class = "overlay2">
+          <div class = "text2"> INTEREST </div>
+        </div>
+      </span>
+      </div>
+    </p>
+    <p style="font-size:2vw; text-decoration: none; margin-bottom:0.8vw; text-align: center;"> Mathematical Physics </p> 
+    
     <p class = "underwear" > 
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Aenean laoreet odio tortor, ac lobortis ante facilisis eget. 
