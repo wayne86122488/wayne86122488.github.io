@@ -143,7 +143,7 @@
       var sanity = 100;
       var paragraph_1 = document.getElementById("para");
       function namename(){
-        var charactername = document.getElementById("cname").value;
+        charactername = document.getElementById("cname").value;
         if (charactername == ""){
           alert("Character Name Must Be Entered.") 
         } else{
@@ -168,6 +168,7 @@
         document.getElementById("para").style.display = "none";
         document.getElementById("dialog_1").style.display = "none";
         sanity = sanity-1;
+        charactername = document.getElementById("cname").value;
         document.getElementById("state").textContent = charactername + "'s sanity : " + sanity.toString(10) ;
         document.getElementById("dialog_1_1").style.display = "block";
         document.getElementById("decision_1_1").style.display = "table";
