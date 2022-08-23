@@ -36,10 +36,32 @@
         padding-bottom: 1vh;
         font-size: 4vh;
       }
+      .dialog{
+        font-size:1.2em; 
+        margin-left: auto; 
+        margin-right:auto; 
+        text-align : center; 
+        color:#a7a7a7; 
+        display: none;
+      }
+      .decision{
+        width:45vw; 
+        font-size:1.0em; 
+        margin-left: auto; 
+        margin-right:auto; 
+        text-align : center; 
+        color:#a7a7a7; 
+        display: none;
+      }
       button{
         cursor:pointer;
         width: 100%;
         height: 100%;
+        background-color: #c2c2c2;
+        color: #191919;
+      }
+      button:hover{
+        background-color: #696969;
       }
       td{
         padding-left:1vw;
@@ -52,65 +74,87 @@
     <main style = "min-height: 70vh;">
       <p id = "moon_guardian" style="text-align: center; padding: 1em; background-color: #282828; color:#a4a4a4; margin-top: 10vh;"> Welcome to Moon Guardian's Wonderland. </p>
     
-      <p id="para" class = "typewriter" style = "margin-left: auto; margin-right:auto; text-align: center; color:#b2b2b2; font-family: monospace; font-size: 3vw;">  HELLO </p>
+      <p id="para" class = "typewriter" style = "margin-left: auto; margin-right:auto; text-align: center; color:#b2b2b2; font-family: monospace; font-size: 1.8em;">  HELLO </p>
       
       <div id = "cname_enter" style = "text-align: center; margin-left: auto; margin-right: auto; color:#b9b6b9"> 
         <label for="fname">Character Name</label><br><br>
-        <input type="text" id="cname" name="cname" style = "text-align: center; width:22vw; height:4vh; font-size: 2.2vh; background-color: #282828; color:#c7c7c7"><br><br>
-        <input style = "cursor:pointer" type ="submit" value = "Submit" onclick="namename()">
+        <input type="text" id="cname" name="cname" style = "text-align: center; width:22vw; height:4vh; font-size: 2.2vh; background-color: #404040; color:#c7c7c7"><br><br>
+        <input style = "cursor:pointer" type ="submit" value = "SUBMIT" onclick="namename()">
       </div>
       
-      <div id="dialog_1" style="font-size:1.9vw; margin-left: auto; margin-right:auto; text-align : center; color:#a7a7a7; display: none;">  
+      <p  id = "state" class = "dialog" style= "color:#c7c7c7">     </p>
+      
+      <div id="dialog_1" class="dialog">  
         Waking up, you found youself lying in a colossal maze.<br><br>
         The walls are made of smooth high white stone. <br><br>
         And the only other thing you can see <br><br>
         is the moon shining above you. <br><br>
         <br>
-        You can either move forward, backward, right, or left.<br><br>
-        What is your choice? <br><br>
+        What is your move? <br><br>
+        <table id="decision_1" class="decision">  
+          <tr>
+            <td> </td>
+            <td> <button onclick="M1_1()"> Move Forward </button> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td> <button onclick = "M1_2()"> Turn Left </button> </td>
+            <td> </td>
+            <td> <button onclick = "M1_3()"> Turn Right </button> </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> <button onclick = "M1_4()"> Move Backward </button> </td>
+            <td> </td>
+          </tr>
+        </table>
       </div>
-      <table id="decision_1" style="width:45vw; font-size:1.8vw; margin-left: auto; margin-right:auto; text-align : center; color:#a7a7a7; display: none;">  
-        <tr>
-          <td> </td>
-          <td> <button> Move Forward </button> </td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td> <button> Turn Left </button> </td>
-          <td> </td>
-          <td> <button> Turn Right </button> </td>
-        </tr>
-        <tr>
-          <td> </td>
-          <td> <button> Move Backward </button> </td>
-          <td> </td>
-        </tr>
-      </table>
 
-
-
-
-
+      <div id="dialog_1_1" class="dialog">  
+          You moved forward.<br><br>
+          The Moon shines brighter on you. (Sanity -1) <br><br>
+        <br>
+          What is your next move? <br><br>
+        <table id="decision_1_1" class="decision">  
+          <tr>
+            <td> </td>
+            <td> <button onclick="M1_1()"> Move Forward </button> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td> <button onclick = "M1_2()"> Turn Left </button> </td>
+            <td> </td>
+            <td> <button onclick = "M1_3()"> Turn Right </button> </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> <button onclick = "M1_4()"> Move Backward </button> </td>
+            <td> </td>
+          </tr>
+        </table>
+      </div>
       
     </main>
     <footer>
       ALWAYS GUARDS THE MOON
     </footer>
     <script>
-
+      var sanity = 100;
+      var charactername = document.getElementById("cname").value;
+      var paragraph_1 = document.getElementById("para");
       function namename(){
-        var charactername = document.getElementById("cname").value;
-        var paragraph_1 = document.getElementById("para");
         if (charactername == ""){
           alert("Character Name Must Be Entered.") 
         } else{
           document.getElementById("cname_enter").style.display = "none";
           paragraph_1.textContent = "Hello " + charactername + "."; 
+          document.getElementById("state").style.display = "block";
+          document.getElementById("state").textContent = charactername + "'s sanity : " + sanity.toString(10) ;
           document.getElementById("dialog_1").style.display = "block";
           document.getElementById("decision_1").style.display = "table";
+          document.getElementById("state").style.display = "block";
         }
       }
-
       var moon_guardian = document.getElementById("moon_guardian");
       function myFunction(){  
         var number1 = 128 + Math.floor(Math.random()*128);  
@@ -118,6 +162,16 @@
         var number3 = 128 + Math.floor(Math.random()*128);
         moon_guardian.style.color = "#" + number1.toString(16) + number2.toString(16) + number3.toString(16);
       }
+
+      function M1_1(){
+        document.getElementById("para").style.display = "none";
+        document.getElementById("dialog_1").style.display = "none";
+        sanity = sanity-1;
+        document.getElementById("state").textContent = charactername + "'s sanity : " + sanity.toString(10) ;
+        document.getElementById("dialog_1_1").style.display = "block";
+        document.getElementById("decision_1_1").style.display = "table";
+      }
+
       setInterval(function(){myFunction()}, 400);
     </script>
   </body>
