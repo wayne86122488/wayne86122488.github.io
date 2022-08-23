@@ -38,7 +38,8 @@
       }
       button{
         cursor:pointer;
-
+        width: 100%;
+        height: 100%;
       }
       td{
         padding-left:1vw;
@@ -49,39 +50,39 @@
   <body style="background-color: #282828;">
     <header> THE GUARDIAN OF THE MOON </header>
     <main style = "min-height: 70vh;">
-      <p id = "moon_guardian" style="text-align: center; padding: 2em; background-color: #282828; color:#a4a4a4; margin-top: 10vh;"> Welcome to Moon Guardian's Wonderland. </p>
+      <p id = "moon_guardian" style="text-align: center; padding: 1em; background-color: #282828; color:#a4a4a4; margin-top: 10vh;"> Welcome to Moon Guardian's Wonderland. </p>
     
       <p id="para" class = "typewriter" style = "margin-left: auto; margin-right:auto; text-align: center; color:#b2b2b2; font-family: monospace; font-size: 3vw;">  HELLO </p>
       
       <div id = "cname_enter" style = "text-align: center; margin-left: auto; margin-right: auto; color:#b9b6b9"> 
         <label for="fname">Character Name</label><br><br>
-        <input type="text" id="cname" name="cname" style = "text-align: center;"><br><br>
+        <input type="text" id="cname" name="cname" style = "text-align: center; width:22vw; height:4vh; font-size: 2.2vh; background-color: #282828; color:#c7c7c7"><br><br>
         <input style = "cursor:pointer" type ="submit" value = "Submit" onclick="namename()">
       </div>
       
       <div id="dialog_1" style="font-size:1.9vw; margin-left: auto; margin-right:auto; text-align : center; color:#a7a7a7; display: none;">  
-        Waking up, you fond youself lying in a colossal maze.<br><br>
+        Waking up, you found youself lying in a colossal maze.<br><br>
         The walls are made of smooth high white stone. <br><br>
-        Only the only other thing you can see <br><br>
+        And the only other thing you can see <br><br>
         is the moon shining above you. <br><br>
         <br>
         You can either move forward, backward, right, or left.<br><br>
         What is your choice? <br><br>
       </div>
-      <table id="decision_1" style="width:40vw; font-size:1.8vw; margin-left: auto; margin-right:auto; text-align : center; color:#a7a7a7; display: none;">  
+      <table id="decision_1" style="width:45vw; font-size:1.8vw; margin-left: auto; margin-right:auto; text-align : center; color:#a7a7a7; display: none;">  
         <tr>
           <td> </td>
-          <td> <a> <button> Move Forward </button> </a> </td>
+          <td> <button> Move Forward </button> </td>
           <td> </td>
         </tr>
         <tr>
-          <td> <a> <button> Turn Left </button> </a> </td>
+          <td> <button> Turn Left </button> </td>
           <td> </td>
-          <td> <a> <button> Turn Right </button> </a> </td>
+          <td> <button> Turn Right </button> </td>
         </tr>
         <tr>
           <td> </td>
-          <td> <a> <button> Move Backward </button> </a> </td>
+          <td> <button> Move Backward </button> </td>
           <td> </td>
         </tr>
       </table>
@@ -117,11 +118,7 @@
         var number3 = 128 + Math.floor(Math.random()*128);
         moon_guardian.style.color = "#" + number1.toString(16) + number2.toString(16) + number3.toString(16);
       }
-      setInterval(function(){myFunction()}, 500);
+      setInterval(function(){myFunction()}, 400);
     </script>
-    <div style = "background-color: white" id="dialog" title="basic dialog">
-      <p> This is the default...</p>
-    </div>
-
   </body>
 </html>
