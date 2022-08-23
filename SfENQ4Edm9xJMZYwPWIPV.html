@@ -78,7 +78,7 @@
       
       <div id = "cname_enter" style = "text-align: center; margin-left: auto; margin-right: auto; color:#b9b6b9"> 
         <label for="fname">Character Name</label><br><br>
-        <input type="text" id="cname" name="cname" style = "text-align: center; width:22vw; height:4vh; font-size: 2.2vh; background-color: #404040; color:#c7c7c7"><br><br>
+        <input autocomplete="on" type="text" id="cname" name="cname" style = "text-align: center; width:22vw; height:4vh; font-size: 2.2vh; background-color: #404040; color:#c7c7c7"><br><br>
         <input style = "cursor:pointer" type ="submit" value = "SUBMIT" onclick="namename()">
       </div>
       
@@ -139,10 +139,11 @@
       ALWAYS GUARDS THE MOON
     </footer>
     <script>
-      var sanity = 100;
       var charactername = document.getElementById("cname").value;
+      var sanity = 100;
       var paragraph_1 = document.getElementById("para");
       function namename(){
+        var charactername = document.getElementById("cname").value;
         if (charactername == ""){
           alert("Character Name Must Be Entered.") 
         } else{
