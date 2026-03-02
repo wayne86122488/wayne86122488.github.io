@@ -661,10 +661,10 @@ def run_and_plot(xmin, xmax, ngrid, nbasis, vpot_expr, nstates, periodic, show_p
         if show_prob:
             y = psi**2 * psi_scale + En
             ax1.fill_between(x_fine, En, y, alpha=0.22, color=col, zorder=3)
-            ax1.plot(x_fine, y, color=col, lw=1.6, label=f'n={n},  E={En:.5g}', zorder=4)
+            ax1.plot(x_fine, y, color=col, lw=1.6, label=f'n={n}', zorder=4)
         else:
             y = psi * psi_scale + En
-            ax1.plot(x_fine, y, color=col, lw=1.8, label=f'n={n},  E={En:.5g}', zorder=4)
+            ax1.plot(x_fine, y, color=col, lw=1.8, label=f'n={n}', zorder=4)
     ax1.set_xlim(xmin, xmax)
     ax1.set_ylim(e_bot, e_top)
     ax1.set_ylabel('Energy  (hbar=m=1)', color='#4a4a5e', fontsize=8.5)
