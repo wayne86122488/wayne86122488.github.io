@@ -671,7 +671,7 @@ def run_and_plot(xmin, xmax, ngrid, nbasis, vpot_expr, nstates, periodic, show_p
     ax1.legend(fontsize=7.5, framealpha=0.75, facecolor='#fefcf8',
                edgecolor='#c5dff8', loc='upper right', ncol=2)
     bc_str  = 'Periodic BC' if periodic else 'Dirichlet BC'
-    psi_str = r'|$\psi_n$|^2 offset' if show_prob else r'$\psi_n$ offset'
+    psi_str = 'Probability Density' if show_prob else 'Wave Function'
     ax1.set_title(f'1D Schrodinger  .  {bc_str}  .  {psi_str}',
                   fontsize=9.5, color='#2c2c3a', pad=9,
                   fontfamily='DejaVu Serif', fontstyle='italic')
